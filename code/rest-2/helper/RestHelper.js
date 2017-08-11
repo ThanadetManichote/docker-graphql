@@ -5,32 +5,40 @@ var mcache  = require('memory-cache');
 var crypto  = require('crypto');
 
 module.exports = class RestHelper {
-
-  searchPrivilege(args){
-    return ['3376326', '3376328']
-  }
-
-  _callRest(method, baseUrl, param){
-    let response
-    let cacheKey   = method+":"+baseUrl+":"+param
+  _callRest(method, baseUrl, param, option){
+    let return_response
+    let cacheKey   = method+":"+baseUrl+":"+JSON.stringify(param)+":"+option
     let cachedBody = mcache.get(cacheKey)
-
-    baseUrl += '?' + param
 
     cacheKey = crypto.createHash('md5').update(cacheKey).digest("hex");
 
     if (cachedBody) {
-      console.log('Key   : '+ cacheKey)
-      console.log('Cache : '+ baseUrl)
-
       return cachedBody
     } else {
-      response = JSON.parse(request(method, baseUrl).getBody('utf-8'))
+      let response
 
-      if (response)
-        mcache.put(cacheKey, response, 3000);
-    }    
+      // console.log(baseUrl)
+      // console.log(option)
 
-    return response
+      if(method == 'GET'){
+        baseUrl += '?' + param
+        
+        response = request(method, baseUrl, option)
+        
+      } else {
+        option.body = param
+        option.headers['content-type'] = 'application/x-www-form-urlencoded'
+
+        response = request(method, baseUrl, option)
+      }
+
+      // console.log("Response :"+response.getBody())
+      return_response = JSON.parse(response.getBody('utf-8'))
+
+      if (return_response)
+        mcache.put(cacheKey, return_response, 3000);
+    }
+
+    return return_response
   }
 }

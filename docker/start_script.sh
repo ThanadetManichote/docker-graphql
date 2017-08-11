@@ -8,6 +8,7 @@ if [ -z $CHAPTER ] ; then
     exit 1;
 fi
 
+touch ../node_module
 docker rm -f $(docker ps -f name=nodejs -q)
 #docker rm -f nodejs-${CHAPTER}
 
