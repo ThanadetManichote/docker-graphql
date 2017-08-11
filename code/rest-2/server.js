@@ -4,37 +4,47 @@ var { buildSchema } = require('graphql');
 var fetch       = require('isomorphic-fetch');
 var RestHelper  = require('./helper/RestHelper.js');
 
-const Trueyou  = require('./model/Trueyou');
-const FiveStar = require('./model/FiveStar');
+const Trueyou    = require('./model/Trueyou');
+const FiveStar   = require('./model/FiveStar');
+const FiveStarMM = require('./model/FiveStarMM');
 
 var schemaString = ''
 
 var TY  = new Trueyou()
 var KY  = new FiveStar()
+var MM  = new FiveStarMM()
 
 schemaString = schemaString + TY.getSchema()
 schemaString = schemaString + KY.getSchema()
+schemaString = schemaString + MM.getSchema()
 
 schemaString = schemaString + `  
-
   type Query {
      trueyou : Trueyou
-     fivestar : FiveStar
+     fivestar(api_key: String) : FiveStar
+     fivestar_myanmar : FiveStarMM
   }
 `;
-
-console.log(schemaString)
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(schemaString);
 
 // The root provides the top-level API endpoints
 var root = {
-  trueyou: function (){
+  trueyou: function (args){
+    global.args = args
+
     return new Trueyou();
   },
-  fivestar : function(){
-    return new FiveStar();
+  fivestar : function(args){
+    global.args = args
+
+    return  new FiveStar()
+  },
+  fivestar_myanmar : function(args){
+    global.args = args
+
+    return  new FiveStarMM()
   }
 }
 

@@ -1,42 +1,41 @@
 const ProductCampaignListModel = require('./FiveStar/ProductCampaignList');
+const ProductCampaignModel     = require('./FiveStar/ProductCampaign');
+const MemberModel              = require('./FiveStar/Member');
 
 class FiveStar {
-    constructor(){ console.log("FiveStar was loaded") }
-    product_campaign_list(args){
-        // return new ProductCampaignListModel(args.cvid, args.limit, args.offset);
+    constructor(){ 
+        console.log("FiveStar was loaded")
     }
-    product_campaign(){}
-// {
-//             "cvId": "2000031700",
-//             "ownerCampaignNameTh": "ทรูยู",
-//             "ownerCampaignNameEn": "Trueyou",
-//             "campaignId": "9",
-//             "campaignNameTh": "ทรูยู",
-//             "campaignNameEn": "Trueyou",
-//             "startedDate": "2017-06-12 00:00:00",
-//             "expiredDate": "2017-08-31 23:59:59",
-//             "product_id": "7",
-//             "code": "6",
-//             "nameTh": "ทดสอบ อกไก่อบชานอ้อยห้าดาว",
-//             "nameEn": "Test Smoked Ham",
-//             "textTh": "ชิ้นละ 29 บาท (ปกติ 57 บาท)  ",
-//             "textEn": "Smoked Ham only 29  bt. Normal price 57 bt.",
-//             "price": "29.00",
-//             "thumbnail": "http://staging-api-kaiyang.eggdigital.com/uploads/campaign/cccaa706db1794ad1d1a8ad8ee02226a.png",
-//             "image": "http://staging-api-kaiyang.eggdigital.com/uploads/campaign/cccaa706db1794ad1d1a8ad8ee02226a.png",
-//             "status": "1",
-//             "createdDate": "2017-06-12 18:03:18"
-//         }
+    product_campaign_list(args){
+        return new ProductCampaignListModel( args.cvid, args.limit, args.offset );
+    }
+    member(args){
+        return new MemberModel( args.cvid, args.secret_code );
+    }
+    product_campaign(args){ return new ProductCampaignModel(args.cvid) }
     getSchema(){
         return `
             type FiveStar {
-                product_campaign_list(cvid : String, limit: Int, offset: Int) : ProductCampaignListModel
+                product_campaign_list(cvid : String, limit: Int, offset: Int) : FSProductCampaignListModel
+                member(cvid : String, secret_code : String) : FSMemberModel
             }
-            type ProductCampaignListModel {
-                product_campaign(cvid : String) : [ProductCampaignModel]
+            
+            type FSProductCampaignListModel {
+                product_campaign : [FSProductCampaignModel]
+                product_campaign_ids : [String]
             }
-            type ProductCampaignModel {
+            type FSProductCampaignModel {
                 cvid : Int
+            }
+            type FSMemberModel {
+                name    : String
+                bankaccount_id : Int,
+                bankaccount_name : String,
+                bankname_th : String,
+                bankname_en : String,
+                open_status : Boolean,
+                shop_latitude : Float ,
+                shop_longtitude : Float
             }
         `
     }
