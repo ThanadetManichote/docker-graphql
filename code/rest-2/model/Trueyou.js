@@ -3,23 +3,41 @@ const PrivilegeModel = require('./Trueyou/Privilege');
 const RestHelper     = require('../helper/RestHelper');
 
 class Trueyou {
-    constructor(){ console.log("Trueyou was loaded") }
+    constructor(){ 
+        console.log("Trueyou was loaded") 
+    }
+    _getQraphType(type) {
+        if (type == 'query') {
+            return new TrueyouQuery();
+        }
+        if (type == 'mutate') {
+            return new TrueyouMutate();
+        }
+    }
+
+    master(args){
+        return this._getQraphType('query').master(args);
+    }
+    privilege(args){
+        return this._getQraphType('query').privilege(args);
+    }
+    createMaster({input}){
+        console.log('In')
+        return this._getQraphType('mutate').createMaster(args);
+    }
+    
+    getSchema(){
+        return new TrueyouQuery().getSchema() + 
+            new TrueyouMutate().getSchema()
+    }
+}
+
+class TrueyouQuery {
     master(args){
         return new MasterModel(args.master_id);
     }
     privilege(args){
         return new PrivilegeModel(args.privilege_id);
-    }
-    privileges(args){
-        var res_return = []
-
-        this.RestHelper = new RestHelper();
-        this.master.privilegelist =  this.RestHelper.searchPrivilege(args)
-        this.master.privilegelist.forEach(function(item) {
-            res_return.push( new PrivilegeModel(item) ) 
-        } )
-
-        return res_return
     }
 
     getSchema(){
@@ -45,10 +63,32 @@ class Trueyou {
                 privilege_info_en : String
                 is_masscampaign : Boolean
             }      
-            type Trueyou {
+            type TrueyouQuery {
                 master(master_id : String, thai_id: String) : MasterModel
                 privilege(privilege_id : String!, thai_id: String) : PrivilegeModel
             }
+        `
+    }
+}
+
+
+class TrueyouMutate {
+    constructor(){ 
+        console.log("TrueyouMutate was loaded") 
+    }
+    createMaster({input}){
+        return new TrueyouQuery().master({"master_id" : "3376327"});
+    }
+    getSchema(){
+        return `
+            input MasterInput {
+                title_en : String
+            }
+
+            type TrueyouMutate{
+                createMaster(input: MasterInput) : MasterModel 
+            }
+            
         `
     }
 }

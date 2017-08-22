@@ -8,6 +8,7 @@ const Trueyou    = require('./model/Trueyou');
 const FiveStar   = require('./model/FiveStar');
 const FiveStarMM = require('./model/FiveStarMM');
 
+
 var schemaString = ''
 
 var TY  = new Trueyou()
@@ -20,9 +21,15 @@ schemaString = schemaString + MM.getSchema()
 
 schemaString = schemaString + `  
   type Query {
-     trueyou : Trueyou
-     fivestar(api_key: String) : FiveStar
-     fivestar_myanmar : FiveStarMM
+     trueyou : TrueyouQuery
+     fivestar(api_key: String) : FiveStarQuery
+     fivestar_myanmar : FiveStarMMQuery
+  }
+
+  type Mutation{
+     trueyou : TrueyouMutate
+     fivestar(api_key: String) : FiveStarMutate
+     fivestar_myanmar : FiveStarMMMutate
   }
 `;
 
@@ -39,12 +46,12 @@ var root = {
   fivestar : function(args){
     global.args = args
 
-    return  new FiveStar()
+    return new FiveStar()
   },
   fivestar_myanmar : function(args){
     global.args = args
 
-    return  new FiveStarMM()
+    return new FiveStarMM()
   }
 }
 

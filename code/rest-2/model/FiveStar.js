@@ -6,6 +6,30 @@ class FiveStar {
     constructor(){ 
         console.log("FiveStar was loaded")
     }
+
+    _getQraphType(type) {
+        if (type == 'query') {
+            return new FiveStarQuery();
+        }
+        if (type == 'mutate') {
+            return new FiveStarMutate();
+        }
+    }
+
+    product_campaign_list(args){
+        return this._getQraphType('query').product_campaign_list( args );
+    }
+    member(args){
+        return this._getQraphType('query').member( args );
+    }
+    product_campaign(args){ return this._getQraphType('query').product_campaign( args ); }
+    
+    getSchema(){
+        return new FiveStarQuery().getSchema() + new FiveStarMutate().getSchema();
+    }
+}
+
+class FiveStarQuery{
     product_campaign_list(args){
         return new ProductCampaignListModel( args.cvid, args.limit, args.offset );
     }
@@ -15,7 +39,7 @@ class FiveStar {
     product_campaign(args){ return new ProductCampaignModel(args.cvid) }
     getSchema(){
         return `
-            type FiveStar {
+            type FiveStarQuery {
                 product_campaign_list(cvid : String, limit: Int, offset: Int) : FSProductCampaignListModel
                 member(cvid : String, secret_code : String) : FSMemberModel
             }
@@ -39,6 +63,14 @@ class FiveStar {
             }
         `
     }
+}
+
+class FiveStarMutate{
+    getSchema(){ return `
+        type FiveStarMutate{
+            TO_BE_IMPLEMENTED : String
+        }
+    `;}
 }
 
 module.exports = FiveStar
