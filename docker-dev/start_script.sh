@@ -8,7 +8,7 @@ if [ -z $CHAPTER ] ; then
     exit 1;
 fi
 
-touch ../node_module
+touch ../node_modules
 docker rm -f $(docker ps -f name=nodejs -q)
 #docker rm -f nodejs-${CHAPTER}
 
@@ -20,7 +20,7 @@ echo "    build: ./" >> ${COMPOSE_FILE}
 
 echo "    volumes:" >> ${COMPOSE_FILE}
 echo "      - ../code/${CHAPTER}:/app/code" >> ${COMPOSE_FILE}
-echo "      - ../node_module:/node_modules/" >> ${COMPOSE_FILE}
+echo "      - ../node_modules:/node_modules/" >> ${COMPOSE_FILE}
 echo "    ports:" >> ${COMPOSE_FILE}
 echo '      - "4000:4000" ' >> ${COMPOSE_FILE}
 echo '      - "8888:8888" '  >> ${COMPOSE_FILE}

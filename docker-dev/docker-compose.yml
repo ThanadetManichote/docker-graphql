@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+ cms:
+    build: ./
+    volumes:
+      - ../code/cms:/app/code
+      - ../node_modules:/node_modules/
+    ports:
+      - "4000:4000" 
+      - "8888:8888" 
+    tty : true
+    container_name:
+      nodejs-cms

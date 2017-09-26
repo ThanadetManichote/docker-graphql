@@ -6,8 +6,9 @@ EXPOSE 4000
 WORKDIR /app/code
 
 ENV NODE_PATH=/usr/local/lib/node_modules/
+ENV NODE_ENV=staging
+ENV NODE_PROJECT={'cms','trueyou'}
 RUN npm config set cache /node_modules/ --global
 
-# RUN apt-get install netcat
 
 CMD "/bin/bash" 

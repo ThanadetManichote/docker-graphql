@@ -7,23 +7,27 @@ var RestHelper  = require('./helper/RestHelper.js');
 const Trueyou    = require('./model/Trueyou');
 const FiveStar   = require('./model/FiveStar');
 const FiveStarMM = require('./model/FiveStarMM');
-
+const Cms = require('./model/Cms');
 
 var schemaString = ''
 
 var TY  = new Trueyou()
 var KY  = new FiveStar()
 var MM  = new FiveStarMM()
+var CMS  = new Cms()
 
 schemaString = schemaString + TY.getSchema()
 schemaString = schemaString + KY.getSchema()
 schemaString = schemaString + MM.getSchema()
+schemaString = schemaString + CMS.getSchema()
+
 
 schemaString = schemaString + `  
   type Query {
      trueyou : TrueyouQuery
      fivestar(api_key: String) : FiveStarQuery
      fivestar_myanmar : FiveStarMMQuery
+     cms : CmsQuery
   }
 
   type Mutation{
@@ -52,6 +56,11 @@ var root = {
     global.args = args
 
     return new FiveStarMM()
+  },
+  cms : function(args){
+    global.args = args
+
+    return new Cms()
   }
 }
 
@@ -63,3 +72,8 @@ app.use('/graphql', graphqlHTTP({
 }));
 app.listen(4000);
 console.log('Running a GraphQL API server at localhost:4000/graphql');
+
+
+
+
+

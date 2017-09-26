@@ -1,0 +1,811 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'request',
+1 verbose cli   'isomorphic-fetch',
+1 verbose cli   'httpclient',
+1 verbose cli   'sync-request',
+1 verbose cli   'memory-cache' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData request
+8 silly fetchPackageMetaData isomorphic-fetch
+9 silly fetchPackageMetaData httpclient
+10 silly fetchPackageMetaData sync-request
+11 silly fetchPackageMetaData memory-cache
+12 silly fetchNamedPackageData request
+13 silly mapToRegistry name request
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry data Result {
+16 silly mapToRegistry   raw: 'request',
+16 silly mapToRegistry   scope: null,
+16 silly mapToRegistry   escapedName: 'request',
+16 silly mapToRegistry   name: 'request',
+16 silly mapToRegistry   rawSpec: '',
+16 silly mapToRegistry   spec: 'latest',
+16 silly mapToRegistry   type: 'tag' }
+17 silly mapToRegistry uri https://registry.npmjs.org/request
+18 silly fetchNamedPackageData isomorphic-fetch
+19 silly mapToRegistry name isomorphic-fetch
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry data Result {
+22 silly mapToRegistry   raw: 'isomorphic-fetch',
+22 silly mapToRegistry   scope: null,
+22 silly mapToRegistry   escapedName: 'isomorphic-fetch',
+22 silly mapToRegistry   name: 'isomorphic-fetch',
+22 silly mapToRegistry   rawSpec: '',
+22 silly mapToRegistry   spec: 'latest',
+22 silly mapToRegistry   type: 'tag' }
+23 silly mapToRegistry uri https://registry.npmjs.org/isomorphic-fetch
+24 silly fetchNamedPackageData httpclient
+25 silly mapToRegistry name httpclient
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: 'httpclient',
+28 silly mapToRegistry   scope: null,
+28 silly mapToRegistry   escapedName: 'httpclient',
+28 silly mapToRegistry   name: 'httpclient',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/httpclient
+30 silly fetchNamedPackageData sync-request
+31 silly mapToRegistry name sync-request
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: 'sync-request',
+34 silly mapToRegistry   scope: null,
+34 silly mapToRegistry   escapedName: 'sync-request',
+34 silly mapToRegistry   name: 'sync-request',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/sync-request
+36 silly fetchNamedPackageData memory-cache
+37 silly mapToRegistry name memory-cache
+38 silly mapToRegistry using default registry
+39 silly mapToRegistry registry https://registry.npmjs.org/
+40 silly mapToRegistry data Result {
+40 silly mapToRegistry   raw: 'memory-cache',
+40 silly mapToRegistry   scope: null,
+40 silly mapToRegistry   escapedName: 'memory-cache',
+40 silly mapToRegistry   name: 'memory-cache',
+40 silly mapToRegistry   rawSpec: '',
+40 silly mapToRegistry   spec: 'latest',
+40 silly mapToRegistry   type: 'tag' }
+41 silly mapToRegistry uri https://registry.npmjs.org/memory-cache
+42 verbose request uri https://registry.npmjs.org/request
+43 verbose request no auth needed
+44 info attempt registry request try #1 at 4:35:18 AM
+45 verbose request id 45758b9c84ac9fd7
+46 http request GET https://registry.npmjs.org/request
+47 verbose request uri https://registry.npmjs.org/isomorphic-fetch
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 4:35:18 AM
+50 http request GET https://registry.npmjs.org/isomorphic-fetch
+51 verbose request uri https://registry.npmjs.org/httpclient
+52 verbose request no auth needed
+53 info attempt registry request try #1 at 4:35:18 AM
+54 http request GET https://registry.npmjs.org/httpclient
+55 verbose request uri https://registry.npmjs.org/sync-request
+56 verbose request no auth needed
+57 info attempt registry request try #1 at 4:35:18 AM
+58 http request GET https://registry.npmjs.org/sync-request
+59 verbose request uri https://registry.npmjs.org/memory-cache
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 4:35:18 AM
+62 http request GET https://registry.npmjs.org/memory-cache
+63 http 200 https://registry.npmjs.org/memory-cache
+64 verbose headers { server: 'nginx/1.10.3',
+64 verbose headers   'content-type': 'application/json',
+64 verbose headers   'last-modified': 'Sun, 20 Aug 2017 01:31:48 GMT',
+64 verbose headers   etag: 'W/"5998e684-4cbd"',
+64 verbose headers   'content-encoding': 'gzip',
+64 verbose headers   'cache-control': 'max-age=300',
+64 verbose headers   'content-length': '3968',
+64 verbose headers   'accept-ranges': 'bytes',
+64 verbose headers   date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+64 verbose headers   via: '1.1 varnish',
+64 verbose headers   age: '278',
+64 verbose headers   connection: 'keep-alive',
+64 verbose headers   'x-served-by': 'cache-sin18027-SIN',
+64 verbose headers   'x-cache': 'HIT',
+64 verbose headers   'x-cache-hits': '3',
+64 verbose headers   'x-timer': 'S1504672518.753319,VS0,VE0',
+64 verbose headers   vary: 'Accept-Encoding, Accept' }
+65 silly get cb [ 200,
+65 silly get   { server: 'nginx/1.10.3',
+65 silly get     'content-type': 'application/json',
+65 silly get     'last-modified': 'Sun, 20 Aug 2017 01:31:48 GMT',
+65 silly get     etag: 'W/"5998e684-4cbd"',
+65 silly get     'content-encoding': 'gzip',
+65 silly get     'cache-control': 'max-age=300',
+65 silly get     'content-length': '3968',
+65 silly get     'accept-ranges': 'bytes',
+65 silly get     date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+65 silly get     via: '1.1 varnish',
+65 silly get     age: '278',
+65 silly get     connection: 'keep-alive',
+65 silly get     'x-served-by': 'cache-sin18027-SIN',
+65 silly get     'x-cache': 'HIT',
+65 silly get     'x-cache-hits': '3',
+65 silly get     'x-timer': 'S1504672518.753319,VS0,VE0',
+65 silly get     vary: 'Accept-Encoding, Accept' } ]
+66 verbose get saving memory-cache to /node_modules/registry.npmjs.org/memory-cache/.cache.json
+67 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+68 http 200 https://registry.npmjs.org/sync-request
+69 verbose headers { server: 'nginx/1.10.3',
+69 verbose headers   'content-type': 'application/json',
+69 verbose headers   'last-modified': 'Sun, 30 Jul 2017 07:15:59 GMT',
+69 verbose headers   etag: 'W/"597d87af-603f"',
+69 verbose headers   'content-encoding': 'gzip',
+69 verbose headers   'cache-control': 'max-age=300',
+69 verbose headers   'content-length': '5074',
+69 verbose headers   'accept-ranges': 'bytes',
+69 verbose headers   date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+69 verbose headers   via: '1.1 varnish',
+69 verbose headers   age: '268',
+69 verbose headers   connection: 'keep-alive',
+69 verbose headers   'x-served-by': 'cache-sin18030-SIN',
+69 verbose headers   'x-cache': 'HIT',
+69 verbose headers   'x-cache-hits': '2',
+69 verbose headers   'x-timer': 'S1504672518.755200,VS0,VE0',
+69 verbose headers   vary: 'Accept-Encoding, Accept' }
+70 silly get cb [ 200,
+70 silly get   { server: 'nginx/1.10.3',
+70 silly get     'content-type': 'application/json',
+70 silly get     'last-modified': 'Sun, 30 Jul 2017 07:15:59 GMT',
+70 silly get     etag: 'W/"597d87af-603f"',
+70 silly get     'content-encoding': 'gzip',
+70 silly get     'cache-control': 'max-age=300',
+70 silly get     'content-length': '5074',
+70 silly get     'accept-ranges': 'bytes',
+70 silly get     date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+70 silly get     via: '1.1 varnish',
+70 silly get     age: '268',
+70 silly get     connection: 'keep-alive',
+70 silly get     'x-served-by': 'cache-sin18030-SIN',
+70 silly get     'x-cache': 'HIT',
+70 silly get     'x-cache-hits': '2',
+70 silly get     'x-timer': 'S1504672518.755200,VS0,VE0',
+70 silly get     vary: 'Accept-Encoding, Accept' } ]
+71 verbose get saving sync-request to /node_modules/registry.npmjs.org/sync-request/.cache.json
+72 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+73 error correctMkdir invalid dir /node_modules
+74 http 200 https://registry.npmjs.org/isomorphic-fetch
+75 verbose headers { server: 'nginx/1.10.3',
+75 verbose headers   'content-type': 'application/json',
+75 verbose headers   'last-modified': 'Fri, 18 Aug 2017 04:57:27 GMT',
+75 verbose headers   etag: 'W/"599673b7-8996"',
+75 verbose headers   'content-encoding': 'gzip',
+75 verbose headers   'cache-control': 'max-age=300',
+75 verbose headers   'content-length': '4545',
+75 verbose headers   'accept-ranges': 'bytes',
+75 verbose headers   date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+75 verbose headers   via: '1.1 varnish',
+75 verbose headers   age: '44',
+75 verbose headers   connection: 'keep-alive',
+75 verbose headers   'x-served-by': 'cache-sin18033-SIN',
+75 verbose headers   'x-cache': 'HIT',
+75 verbose headers   'x-cache-hits': '2',
+75 verbose headers   'x-timer': 'S1504672518.755899,VS0,VE0',
+75 verbose headers   vary: 'Accept-Encoding, Accept' }
+76 silly get cb [ 200,
+76 silly get   { server: 'nginx/1.10.3',
+76 silly get     'content-type': 'application/json',
+76 silly get     'last-modified': 'Fri, 18 Aug 2017 04:57:27 GMT',
+76 silly get     etag: 'W/"599673b7-8996"',
+76 silly get     'content-encoding': 'gzip',
+76 silly get     'cache-control': 'max-age=300',
+76 silly get     'content-length': '4545',
+76 silly get     'accept-ranges': 'bytes',
+76 silly get     date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+76 silly get     via: '1.1 varnish',
+76 silly get     age: '44',
+76 silly get     connection: 'keep-alive',
+76 silly get     'x-served-by': 'cache-sin18033-SIN',
+76 silly get     'x-cache': 'HIT',
+76 silly get     'x-cache-hits': '2',
+76 silly get     'x-timer': 'S1504672518.755899,VS0,VE0',
+76 silly get     vary: 'Accept-Encoding, Accept' } ]
+77 verbose get saving isomorphic-fetch to /node_modules/registry.npmjs.org/isomorphic-fetch/.cache.json
+78 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+79 http 200 https://registry.npmjs.org/httpclient
+80 verbose headers { server: 'nginx/1.10.3',
+80 verbose headers   'content-type': 'application/json',
+80 verbose headers   'last-modified': 'Wed, 13 Apr 2016 11:43:26 GMT',
+80 verbose headers   etag: 'W/"570e30de-1c72"',
+80 verbose headers   'content-encoding': 'gzip',
+80 verbose headers   'cache-control': 'max-age=300',
+80 verbose headers   'content-length': '1618',
+80 verbose headers   'accept-ranges': 'bytes',
+80 verbose headers   date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+80 verbose headers   via: '1.1 varnish',
+80 verbose headers   age: '256',
+80 verbose headers   connection: 'keep-alive',
+80 verbose headers   'x-served-by': 'cache-sin18024-SIN',
+80 verbose headers   'x-cache': 'HIT',
+80 verbose headers   'x-cache-hits': '1',
+80 verbose headers   'x-timer': 'S1504672518.751195,VS0,VE0',
+80 verbose headers   vary: 'Accept-Encoding, Accept' }
+81 silly get cb [ 200,
+81 silly get   { server: 'nginx/1.10.3',
+81 silly get     'content-type': 'application/json',
+81 silly get     'last-modified': 'Wed, 13 Apr 2016 11:43:26 GMT',
+81 silly get     etag: 'W/"570e30de-1c72"',
+81 silly get     'content-encoding': 'gzip',
+81 silly get     'cache-control': 'max-age=300',
+81 silly get     'content-length': '1618',
+81 silly get     'accept-ranges': 'bytes',
+81 silly get     date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+81 silly get     via: '1.1 varnish',
+81 silly get     age: '256',
+81 silly get     connection: 'keep-alive',
+81 silly get     'x-served-by': 'cache-sin18024-SIN',
+81 silly get     'x-cache': 'HIT',
+81 silly get     'x-cache-hits': '1',
+81 silly get     'x-timer': 'S1504672518.751195,VS0,VE0',
+81 silly get     vary: 'Accept-Encoding, Accept' } ]
+82 verbose get saving httpclient to /node_modules/registry.npmjs.org/httpclient/.cache.json
+83 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+84 error correctMkdir invalid dir /node_modules
+85 http 200 https://registry.npmjs.org/request
+86 verbose headers { server: 'nginx/1.10.3',
+86 verbose headers   'content-type': 'application/json',
+86 verbose headers   'last-modified': 'Tue, 05 Sep 2017 07:54:29 GMT',
+86 verbose headers   etag: 'W/"59ae5835-37c6a"',
+86 verbose headers   'content-encoding': 'gzip',
+86 verbose headers   'cache-control': 'max-age=300',
+86 verbose headers   'content-length': '35030',
+86 verbose headers   'accept-ranges': 'bytes',
+86 verbose headers   date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+86 verbose headers   via: '1.1 varnish',
+86 verbose headers   age: '184',
+86 verbose headers   connection: 'keep-alive',
+86 verbose headers   'x-served-by': 'cache-sin18028-SIN',
+86 verbose headers   'x-cache': 'HIT',
+86 verbose headers   'x-cache-hits': '6',
+86 verbose headers   'x-timer': 'S1504672518.753141,VS0,VE0',
+86 verbose headers   vary: 'Accept-Encoding, Accept' }
+87 silly get cb [ 200,
+87 silly get   { server: 'nginx/1.10.3',
+87 silly get     'content-type': 'application/json',
+87 silly get     'last-modified': 'Tue, 05 Sep 2017 07:54:29 GMT',
+87 silly get     etag: 'W/"59ae5835-37c6a"',
+87 silly get     'content-encoding': 'gzip',
+87 silly get     'cache-control': 'max-age=300',
+87 silly get     'content-length': '35030',
+87 silly get     'accept-ranges': 'bytes',
+87 silly get     date: 'Wed, 06 Sep 2017 04:35:17 GMT',
+87 silly get     via: '1.1 varnish',
+87 silly get     age: '184',
+87 silly get     connection: 'keep-alive',
+87 silly get     'x-served-by': 'cache-sin18028-SIN',
+87 silly get     'x-cache': 'HIT',
+87 silly get     'x-cache-hits': '6',
+87 silly get     'x-timer': 'S1504672518.753141,VS0,VE0',
+87 silly get     vary: 'Accept-Encoding, Accept' } ]
+88 verbose get saving request to /node_modules/registry.npmjs.org/request/.cache.json
+89 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+90 error correctMkdir invalid dir /node_modules
+91 silly install normalizeTree
+92 silly loadCurrentTree Finishing
+93 silly loadIdealTree Starting
+94 silly install loadIdealTree
+95 silly cloneCurrentTree Starting
+96 silly install cloneCurrentTreeToIdealTree
+97 silly cloneCurrentTree Finishing
+98 silly loadShrinkwrap Starting
+99 silly install loadShrinkwrap
+100 silly loadShrinkwrap Finishing
+101 silly loadAllDepsIntoIdealTree Starting
+102 silly install loadAllDepsIntoIdealTree
+103 silly resolveWithNewModule memory-cache@0.2.0 checking installable status
+104 silly cache add args [ 'memory-cache', null ]
+105 verbose cache add spec memory-cache
+106 silly resolveWithNewModule sync-request@4.1.0 checking installable status
+107 silly cache add args [ 'sync-request', null ]
+108 verbose cache add spec sync-request
+109 silly resolveWithNewModule isomorphic-fetch@2.2.1 checking installable status
+110 silly cache add args [ 'isomorphic-fetch', null ]
+111 verbose cache add spec isomorphic-fetch
+112 silly resolveWithNewModule httpclient@0.1.0 checking installable status
+113 silly cache add args [ 'httpclient', null ]
+114 verbose cache add spec httpclient
+115 silly resolveWithNewModule request@2.81.0 checking installable status
+116 silly cache add args [ 'request', null ]
+117 verbose cache add spec request
+118 silly cache add parsed spec Result {
+118 silly cache add   raw: 'memory-cache',
+118 silly cache add   scope: null,
+118 silly cache add   escapedName: 'memory-cache',
+118 silly cache add   name: 'memory-cache',
+118 silly cache add   rawSpec: '',
+118 silly cache add   spec: 'latest',
+118 silly cache add   type: 'tag' }
+119 silly addNamed memory-cache@latest
+120 verbose addNamed "latest" is being treated as a dist-tag for memory-cache
+121 info addNameTag [ 'memory-cache', 'latest' ]
+122 silly mapToRegistry name memory-cache
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry https://registry.npmjs.org/
+125 silly mapToRegistry data Result {
+125 silly mapToRegistry   raw: 'memory-cache',
+125 silly mapToRegistry   scope: null,
+125 silly mapToRegistry   escapedName: 'memory-cache',
+125 silly mapToRegistry   name: 'memory-cache',
+125 silly mapToRegistry   rawSpec: '',
+125 silly mapToRegistry   spec: 'latest',
+125 silly mapToRegistry   type: 'tag' }
+126 silly mapToRegistry uri https://registry.npmjs.org/memory-cache
+127 verbose addNameTag registry:https://registry.npmjs.org/memory-cache not in flight; fetching
+128 silly cache add parsed spec Result {
+128 silly cache add   raw: 'sync-request',
+128 silly cache add   scope: null,
+128 silly cache add   escapedName: 'sync-request',
+128 silly cache add   name: 'sync-request',
+128 silly cache add   rawSpec: '',
+128 silly cache add   spec: 'latest',
+128 silly cache add   type: 'tag' }
+129 silly addNamed sync-request@latest
+130 verbose addNamed "latest" is being treated as a dist-tag for sync-request
+131 info addNameTag [ 'sync-request', 'latest' ]
+132 silly mapToRegistry name sync-request
+133 silly mapToRegistry using default registry
+134 silly mapToRegistry registry https://registry.npmjs.org/
+135 silly mapToRegistry data Result {
+135 silly mapToRegistry   raw: 'sync-request',
+135 silly mapToRegistry   scope: null,
+135 silly mapToRegistry   escapedName: 'sync-request',
+135 silly mapToRegistry   name: 'sync-request',
+135 silly mapToRegistry   rawSpec: '',
+135 silly mapToRegistry   spec: 'latest',
+135 silly mapToRegistry   type: 'tag' }
+136 silly mapToRegistry uri https://registry.npmjs.org/sync-request
+137 verbose addNameTag registry:https://registry.npmjs.org/sync-request not in flight; fetching
+138 silly cache add parsed spec Result {
+138 silly cache add   raw: 'isomorphic-fetch',
+138 silly cache add   scope: null,
+138 silly cache add   escapedName: 'isomorphic-fetch',
+138 silly cache add   name: 'isomorphic-fetch',
+138 silly cache add   rawSpec: '',
+138 silly cache add   spec: 'latest',
+138 silly cache add   type: 'tag' }
+139 silly addNamed isomorphic-fetch@latest
+140 verbose addNamed "latest" is being treated as a dist-tag for isomorphic-fetch
+141 info addNameTag [ 'isomorphic-fetch', 'latest' ]
+142 silly mapToRegistry name isomorphic-fetch
+143 silly mapToRegistry using default registry
+144 silly mapToRegistry registry https://registry.npmjs.org/
+145 silly mapToRegistry data Result {
+145 silly mapToRegistry   raw: 'isomorphic-fetch',
+145 silly mapToRegistry   scope: null,
+145 silly mapToRegistry   escapedName: 'isomorphic-fetch',
+145 silly mapToRegistry   name: 'isomorphic-fetch',
+145 silly mapToRegistry   rawSpec: '',
+145 silly mapToRegistry   spec: 'latest',
+145 silly mapToRegistry   type: 'tag' }
+146 silly mapToRegistry uri https://registry.npmjs.org/isomorphic-fetch
+147 verbose addNameTag registry:https://registry.npmjs.org/isomorphic-fetch not in flight; fetching
+148 silly cache add parsed spec Result {
+148 silly cache add   raw: 'httpclient',
+148 silly cache add   scope: null,
+148 silly cache add   escapedName: 'httpclient',
+148 silly cache add   name: 'httpclient',
+148 silly cache add   rawSpec: '',
+148 silly cache add   spec: 'latest',
+148 silly cache add   type: 'tag' }
+149 silly addNamed httpclient@latest
+150 verbose addNamed "latest" is being treated as a dist-tag for httpclient
+151 info addNameTag [ 'httpclient', 'latest' ]
+152 silly mapToRegistry name httpclient
+153 silly mapToRegistry using default registry
+154 silly mapToRegistry registry https://registry.npmjs.org/
+155 silly mapToRegistry data Result {
+155 silly mapToRegistry   raw: 'httpclient',
+155 silly mapToRegistry   scope: null,
+155 silly mapToRegistry   escapedName: 'httpclient',
+155 silly mapToRegistry   name: 'httpclient',
+155 silly mapToRegistry   rawSpec: '',
+155 silly mapToRegistry   spec: 'latest',
+155 silly mapToRegistry   type: 'tag' }
+156 silly mapToRegistry uri https://registry.npmjs.org/httpclient
+157 verbose addNameTag registry:https://registry.npmjs.org/httpclient not in flight; fetching
+158 silly cache add parsed spec Result {
+158 silly cache add   raw: 'request',
+158 silly cache add   scope: null,
+158 silly cache add   escapedName: 'request',
+158 silly cache add   name: 'request',
+158 silly cache add   rawSpec: '',
+158 silly cache add   spec: 'latest',
+158 silly cache add   type: 'tag' }
+159 silly addNamed request@latest
+160 verbose addNamed "latest" is being treated as a dist-tag for request
+161 info addNameTag [ 'request', 'latest' ]
+162 silly mapToRegistry name request
+163 silly mapToRegistry using default registry
+164 silly mapToRegistry registry https://registry.npmjs.org/
+165 silly mapToRegistry data Result {
+165 silly mapToRegistry   raw: 'request',
+165 silly mapToRegistry   scope: null,
+165 silly mapToRegistry   escapedName: 'request',
+165 silly mapToRegistry   name: 'request',
+165 silly mapToRegistry   rawSpec: '',
+165 silly mapToRegistry   spec: 'latest',
+165 silly mapToRegistry   type: 'tag' }
+166 silly mapToRegistry uri https://registry.npmjs.org/request
+167 verbose addNameTag registry:https://registry.npmjs.org/request not in flight; fetching
+168 verbose request uri https://registry.npmjs.org/memory-cache
+169 verbose request no auth needed
+170 info attempt registry request try #1 at 4:35:18 AM
+171 http request GET https://registry.npmjs.org/memory-cache
+172 verbose request uri https://registry.npmjs.org/sync-request
+173 verbose request no auth needed
+174 info attempt registry request try #1 at 4:35:18 AM
+175 http request GET https://registry.npmjs.org/sync-request
+176 verbose request uri https://registry.npmjs.org/isomorphic-fetch
+177 verbose request no auth needed
+178 info attempt registry request try #1 at 4:35:18 AM
+179 http request GET https://registry.npmjs.org/isomorphic-fetch
+180 verbose request uri https://registry.npmjs.org/httpclient
+181 verbose request no auth needed
+182 info attempt registry request try #1 at 4:35:18 AM
+183 http request GET https://registry.npmjs.org/httpclient
+184 verbose request uri https://registry.npmjs.org/request
+185 verbose request no auth needed
+186 info attempt registry request try #1 at 4:35:18 AM
+187 http request GET https://registry.npmjs.org/request
+188 http 200 https://registry.npmjs.org/httpclient
+189 verbose headers { server: 'nginx/1.10.3',
+189 verbose headers   'content-type': 'application/json',
+189 verbose headers   'last-modified': 'Wed, 13 Apr 2016 11:43:26 GMT',
+189 verbose headers   etag: 'W/"570e30de-1c72"',
+189 verbose headers   'content-encoding': 'gzip',
+189 verbose headers   'cache-control': 'max-age=300',
+189 verbose headers   'content-length': '1618',
+189 verbose headers   'accept-ranges': 'bytes',
+189 verbose headers   date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+189 verbose headers   via: '1.1 varnish',
+189 verbose headers   age: '256',
+189 verbose headers   connection: 'keep-alive',
+189 verbose headers   'x-served-by': 'cache-sin18024-SIN',
+189 verbose headers   'x-cache': 'HIT',
+189 verbose headers   'x-cache-hits': '2',
+189 verbose headers   'x-timer': 'S1504672518.080017,VS0,VE0',
+189 verbose headers   vary: 'Accept-Encoding, Accept' }
+190 silly get cb [ 200,
+190 silly get   { server: 'nginx/1.10.3',
+190 silly get     'content-type': 'application/json',
+190 silly get     'last-modified': 'Wed, 13 Apr 2016 11:43:26 GMT',
+190 silly get     etag: 'W/"570e30de-1c72"',
+190 silly get     'content-encoding': 'gzip',
+190 silly get     'cache-control': 'max-age=300',
+190 silly get     'content-length': '1618',
+190 silly get     'accept-ranges': 'bytes',
+190 silly get     date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+190 silly get     via: '1.1 varnish',
+190 silly get     age: '256',
+190 silly get     connection: 'keep-alive',
+190 silly get     'x-served-by': 'cache-sin18024-SIN',
+190 silly get     'x-cache': 'HIT',
+190 silly get     'x-cache-hits': '2',
+190 silly get     'x-timer': 'S1504672518.080017,VS0,VE0',
+190 silly get     vary: 'Accept-Encoding, Accept' } ]
+191 verbose get saving httpclient to /node_modules/registry.npmjs.org/httpclient/.cache.json
+192 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+193 http 200 https://registry.npmjs.org/memory-cache
+194 verbose headers { server: 'nginx/1.10.3',
+194 verbose headers   'content-type': 'application/json',
+194 verbose headers   'last-modified': 'Sun, 20 Aug 2017 01:31:48 GMT',
+194 verbose headers   etag: 'W/"5998e684-4cbd"',
+194 verbose headers   'content-encoding': 'gzip',
+194 verbose headers   'cache-control': 'max-age=300',
+194 verbose headers   'content-length': '3968',
+194 verbose headers   'accept-ranges': 'bytes',
+194 verbose headers   date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+194 verbose headers   via: '1.1 varnish',
+194 verbose headers   age: '279',
+194 verbose headers   connection: 'keep-alive',
+194 verbose headers   'x-served-by': 'cache-sin18027-SIN',
+194 verbose headers   'x-cache': 'HIT',
+194 verbose headers   'x-cache-hits': '4',
+194 verbose headers   'x-timer': 'S1504672518.079600,VS0,VE0',
+194 verbose headers   vary: 'Accept-Encoding, Accept' }
+195 silly get cb [ 200,
+195 silly get   { server: 'nginx/1.10.3',
+195 silly get     'content-type': 'application/json',
+195 silly get     'last-modified': 'Sun, 20 Aug 2017 01:31:48 GMT',
+195 silly get     etag: 'W/"5998e684-4cbd"',
+195 silly get     'content-encoding': 'gzip',
+195 silly get     'cache-control': 'max-age=300',
+195 silly get     'content-length': '3968',
+195 silly get     'accept-ranges': 'bytes',
+195 silly get     date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+195 silly get     via: '1.1 varnish',
+195 silly get     age: '279',
+195 silly get     connection: 'keep-alive',
+195 silly get     'x-served-by': 'cache-sin18027-SIN',
+195 silly get     'x-cache': 'HIT',
+195 silly get     'x-cache-hits': '4',
+195 silly get     'x-timer': 'S1504672518.079600,VS0,VE0',
+195 silly get     vary: 'Accept-Encoding, Accept' } ]
+196 verbose get saving memory-cache to /node_modules/registry.npmjs.org/memory-cache/.cache.json
+197 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+198 error correctMkdir invalid dir /node_modules
+199 silly addNameTag next cb for httpclient with tag latest
+200 silly addNamed httpclient@0.1.0
+201 verbose addNamed "0.1.0" is a plain semver version for httpclient
+202 silly addNameTag next cb for memory-cache with tag latest
+203 silly addNamed memory-cache@0.2.0
+204 verbose addNamed "0.2.0" is a plain semver version for memory-cache
+205 silly mapToRegistry name httpclient
+206 silly mapToRegistry using default registry
+207 silly mapToRegistry registry https://registry.npmjs.org/
+208 silly mapToRegistry data Result {
+208 silly mapToRegistry   raw: 'httpclient',
+208 silly mapToRegistry   scope: null,
+208 silly mapToRegistry   escapedName: 'httpclient',
+208 silly mapToRegistry   name: 'httpclient',
+208 silly mapToRegistry   rawSpec: '',
+208 silly mapToRegistry   spec: 'latest',
+208 silly mapToRegistry   type: 'tag' }
+209 silly mapToRegistry uri https://registry.npmjs.org/httpclient
+210 verbose addRemoteTarball https://registry.npmjs.org/httpclient/-/httpclient-0.1.0.tgz not in flight; adding
+211 verbose addRemoteTarball [ 'https://registry.npmjs.org/httpclient/-/httpclient-0.1.0.tgz',
+211 verbose addRemoteTarball   '680416b38cc86b78302b7abddb93a0cd0300316f' ]
+212 silly mapToRegistry name memory-cache
+213 silly mapToRegistry using default registry
+214 silly mapToRegistry registry https://registry.npmjs.org/
+215 silly mapToRegistry data Result {
+215 silly mapToRegistry   raw: 'memory-cache',
+215 silly mapToRegistry   scope: null,
+215 silly mapToRegistry   escapedName: 'memory-cache',
+215 silly mapToRegistry   name: 'memory-cache',
+215 silly mapToRegistry   rawSpec: '',
+215 silly mapToRegistry   spec: 'latest',
+215 silly mapToRegistry   type: 'tag' }
+216 silly mapToRegistry uri https://registry.npmjs.org/memory-cache
+217 verbose addRemoteTarball https://registry.npmjs.org/memory-cache/-/memory-cache-0.2.0.tgz not in flight; adding
+218 verbose addRemoteTarball [ 'https://registry.npmjs.org/memory-cache/-/memory-cache-0.2.0.tgz',
+218 verbose addRemoteTarball   '7890b01d52c00c8ebc9d533e1f8eb17e3034871a' ]
+219 http 200 https://registry.npmjs.org/isomorphic-fetch
+220 verbose headers { server: 'nginx/1.10.3',
+220 verbose headers   'content-type': 'application/json',
+220 verbose headers   'last-modified': 'Fri, 18 Aug 2017 04:57:27 GMT',
+220 verbose headers   etag: 'W/"599673b7-8996"',
+220 verbose headers   'content-encoding': 'gzip',
+220 verbose headers   'cache-control': 'max-age=300',
+220 verbose headers   'content-length': '4545',
+220 verbose headers   'accept-ranges': 'bytes',
+220 verbose headers   date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+220 verbose headers   via: '1.1 varnish',
+220 verbose headers   age: '44',
+220 verbose headers   connection: 'keep-alive',
+220 verbose headers   'x-served-by': 'cache-sin18033-SIN',
+220 verbose headers   'x-cache': 'HIT',
+220 verbose headers   'x-cache-hits': '3',
+220 verbose headers   'x-timer': 'S1504672518.080635,VS0,VE0',
+220 verbose headers   vary: 'Accept-Encoding, Accept' }
+221 silly get cb [ 200,
+221 silly get   { server: 'nginx/1.10.3',
+221 silly get     'content-type': 'application/json',
+221 silly get     'last-modified': 'Fri, 18 Aug 2017 04:57:27 GMT',
+221 silly get     etag: 'W/"599673b7-8996"',
+221 silly get     'content-encoding': 'gzip',
+221 silly get     'cache-control': 'max-age=300',
+221 silly get     'content-length': '4545',
+221 silly get     'accept-ranges': 'bytes',
+221 silly get     date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+221 silly get     via: '1.1 varnish',
+221 silly get     age: '44',
+221 silly get     connection: 'keep-alive',
+221 silly get     'x-served-by': 'cache-sin18033-SIN',
+221 silly get     'x-cache': 'HIT',
+221 silly get     'x-cache-hits': '3',
+221 silly get     'x-timer': 'S1504672518.080635,VS0,VE0',
+221 silly get     vary: 'Accept-Encoding, Accept' } ]
+222 verbose get saving isomorphic-fetch to /node_modules/registry.npmjs.org/isomorphic-fetch/.cache.json
+223 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+224 http 200 https://registry.npmjs.org/sync-request
+225 verbose headers { server: 'nginx/1.10.3',
+225 verbose headers   'content-type': 'application/json',
+225 verbose headers   'last-modified': 'Sun, 30 Jul 2017 07:15:59 GMT',
+225 verbose headers   etag: 'W/"597d87af-603f"',
+225 verbose headers   'content-encoding': 'gzip',
+225 verbose headers   'cache-control': 'max-age=300',
+225 verbose headers   'content-length': '5074',
+225 verbose headers   'accept-ranges': 'bytes',
+225 verbose headers   date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+225 verbose headers   via: '1.1 varnish',
+225 verbose headers   age: '268',
+225 verbose headers   connection: 'keep-alive',
+225 verbose headers   'x-served-by': 'cache-sin18030-SIN',
+225 verbose headers   'x-cache': 'HIT',
+225 verbose headers   'x-cache-hits': '3',
+225 verbose headers   'x-timer': 'S1504672518.078974,VS0,VE0',
+225 verbose headers   vary: 'Accept-Encoding, Accept' }
+226 silly get cb [ 200,
+226 silly get   { server: 'nginx/1.10.3',
+226 silly get     'content-type': 'application/json',
+226 silly get     'last-modified': 'Sun, 30 Jul 2017 07:15:59 GMT',
+226 silly get     etag: 'W/"597d87af-603f"',
+226 silly get     'content-encoding': 'gzip',
+226 silly get     'cache-control': 'max-age=300',
+226 silly get     'content-length': '5074',
+226 silly get     'accept-ranges': 'bytes',
+226 silly get     date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+226 silly get     via: '1.1 varnish',
+226 silly get     age: '268',
+226 silly get     connection: 'keep-alive',
+226 silly get     'x-served-by': 'cache-sin18030-SIN',
+226 silly get     'x-cache': 'HIT',
+226 silly get     'x-cache-hits': '3',
+226 silly get     'x-timer': 'S1504672518.078974,VS0,VE0',
+226 silly get     vary: 'Accept-Encoding, Accept' } ]
+227 verbose get saving sync-request to /node_modules/registry.npmjs.org/sync-request/.cache.json
+228 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+229 error correctMkdir invalid dir /node_modules
+230 silly addNameTag next cb for isomorphic-fetch with tag latest
+231 silly addNamed isomorphic-fetch@2.2.1
+232 verbose addNamed "2.2.1" is a plain semver version for isomorphic-fetch
+233 silly addNameTag next cb for sync-request with tag latest
+234 silly addNamed sync-request@4.1.0
+235 verbose addNamed "4.1.0" is a plain semver version for sync-request
+236 silly mapToRegistry name isomorphic-fetch
+237 silly mapToRegistry using default registry
+238 silly mapToRegistry registry https://registry.npmjs.org/
+239 silly mapToRegistry data Result {
+239 silly mapToRegistry   raw: 'isomorphic-fetch',
+239 silly mapToRegistry   scope: null,
+239 silly mapToRegistry   escapedName: 'isomorphic-fetch',
+239 silly mapToRegistry   name: 'isomorphic-fetch',
+239 silly mapToRegistry   rawSpec: '',
+239 silly mapToRegistry   spec: 'latest',
+239 silly mapToRegistry   type: 'tag' }
+240 silly mapToRegistry uri https://registry.npmjs.org/isomorphic-fetch
+241 verbose addRemoteTarball https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz not in flight; adding
+242 verbose addRemoteTarball [ 'https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz',
+242 verbose addRemoteTarball   '611ae1acf14f5e81f729507472819fe9733558a9' ]
+243 silly mapToRegistry name sync-request
+244 silly mapToRegistry using default registry
+245 silly mapToRegistry registry https://registry.npmjs.org/
+246 silly mapToRegistry data Result {
+246 silly mapToRegistry   raw: 'sync-request',
+246 silly mapToRegistry   scope: null,
+246 silly mapToRegistry   escapedName: 'sync-request',
+246 silly mapToRegistry   name: 'sync-request',
+246 silly mapToRegistry   rawSpec: '',
+246 silly mapToRegistry   spec: 'latest',
+246 silly mapToRegistry   type: 'tag' }
+247 silly mapToRegistry uri https://registry.npmjs.org/sync-request
+248 verbose addRemoteTarball https://registry.npmjs.org/sync-request/-/sync-request-4.1.0.tgz not in flight; adding
+249 verbose addRemoteTarball [ 'https://registry.npmjs.org/sync-request/-/sync-request-4.1.0.tgz',
+249 verbose addRemoteTarball   '324b4e506fb994d2afd2a0021a455f800725f07a' ]
+250 info retry fetch attempt 1 at 4:35:19 AM
+251 info attempt registry request try #1 at 4:35:19 AM
+252 http fetch GET https://registry.npmjs.org/httpclient/-/httpclient-0.1.0.tgz
+253 info retry fetch attempt 1 at 4:35:19 AM
+254 info attempt registry request try #1 at 4:35:19 AM
+255 http fetch GET https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz
+256 info retry fetch attempt 1 at 4:35:19 AM
+257 info attempt registry request try #1 at 4:35:19 AM
+258 http fetch GET https://registry.npmjs.org/sync-request/-/sync-request-4.1.0.tgz
+259 info retry fetch attempt 1 at 4:35:19 AM
+260 info attempt registry request try #1 at 4:35:19 AM
+261 http fetch GET https://registry.npmjs.org/memory-cache/-/memory-cache-0.2.0.tgz
+262 http fetch 200 https://registry.npmjs.org/httpclient/-/httpclient-0.1.0.tgz
+263 http 200 https://registry.npmjs.org/request
+264 verbose headers { server: 'nginx/1.10.3',
+264 verbose headers   'content-type': 'application/json',
+264 verbose headers   'last-modified': 'Tue, 05 Sep 2017 07:54:29 GMT',
+264 verbose headers   etag: 'W/"59ae5835-37c6a"',
+264 verbose headers   'content-encoding': 'gzip',
+264 verbose headers   'cache-control': 'max-age=300',
+264 verbose headers   'content-length': '35030',
+264 verbose headers   'accept-ranges': 'bytes',
+264 verbose headers   date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+264 verbose headers   via: '1.1 varnish',
+264 verbose headers   age: '184',
+264 verbose headers   connection: 'keep-alive',
+264 verbose headers   'x-served-by': 'cache-sin18028-SIN',
+264 verbose headers   'x-cache': 'HIT',
+264 verbose headers   'x-cache-hits': '7',
+264 verbose headers   'x-timer': 'S1504672518.080399,VS0,VE0',
+264 verbose headers   vary: 'Accept-Encoding, Accept' }
+265 silly get cb [ 200,
+265 silly get   { server: 'nginx/1.10.3',
+265 silly get     'content-type': 'application/json',
+265 silly get     'last-modified': 'Tue, 05 Sep 2017 07:54:29 GMT',
+265 silly get     etag: 'W/"59ae5835-37c6a"',
+265 silly get     'content-encoding': 'gzip',
+265 silly get     'cache-control': 'max-age=300',
+265 silly get     'content-length': '35030',
+265 silly get     'accept-ranges': 'bytes',
+265 silly get     date: 'Wed, 06 Sep 2017 04:35:18 GMT',
+265 silly get     via: '1.1 varnish',
+265 silly get     age: '184',
+265 silly get     connection: 'keep-alive',
+265 silly get     'x-served-by': 'cache-sin18028-SIN',
+265 silly get     'x-cache': 'HIT',
+265 silly get     'x-cache-hits': '7',
+265 silly get     'x-timer': 'S1504672518.080399,VS0,VE0',
+265 silly get     vary: 'Accept-Encoding, Accept' } ]
+266 verbose get saving request to /node_modules/registry.npmjs.org/request/.cache.json
+267 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+268 http fetch 200 https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz
+269 http fetch 200 https://registry.npmjs.org/sync-request/-/sync-request-4.1.0.tgz
+270 error correctMkdir invalid dir /node_modules
+271 http fetch 200 https://registry.npmjs.org/memory-cache/-/memory-cache-0.2.0.tgz
+272 silly addNameTag next cb for request with tag latest
+273 silly addNamed request@2.81.0
+274 verbose addNamed "2.81.0" is a plain semver version for request
+275 silly mapToRegistry name request
+276 silly mapToRegistry using default registry
+277 silly mapToRegistry registry https://registry.npmjs.org/
+278 silly mapToRegistry data Result {
+278 silly mapToRegistry   raw: 'request',
+278 silly mapToRegistry   scope: null,
+278 silly mapToRegistry   escapedName: 'request',
+278 silly mapToRegistry   name: 'request',
+278 silly mapToRegistry   rawSpec: '',
+278 silly mapToRegistry   spec: 'latest',
+278 silly mapToRegistry   type: 'tag' }
+279 silly mapToRegistry uri https://registry.npmjs.org/request
+280 verbose addRemoteTarball https://registry.npmjs.org/request/-/request-2.81.0.tgz not in flight; adding
+281 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.81.0.tgz',
+281 verbose addRemoteTarball   'c6928946a0e06c5f8d6f8a9333469ffda46298a0' ]
+282 silly fetchAndShaCheck shasum 680416b38cc86b78302b7abddb93a0cd0300316f
+283 silly fetchAndShaCheck shasum 611ae1acf14f5e81f729507472819fe9733558a9
+284 silly fetchAndShaCheck shasum 324b4e506fb994d2afd2a0021a455f800725f07a
+285 info retry fetch attempt 1 at 4:35:19 AM
+286 info attempt registry request try #1 at 4:35:19 AM
+287 http fetch GET https://registry.npmjs.org/request/-/request-2.81.0.tgz
+288 verbose addTmpTarball /tmp/npm-26-c30885fa/registry.npmjs.org/httpclient/-/httpclient-0.1.0.tgz not in flight; adding
+289 verbose addTmpTarball already have metadata; skipping unpack for httpclient@0.1.0
+290 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+291 silly fetchAndShaCheck shasum 7890b01d52c00c8ebc9d533e1f8eb17e3034871a
+292 verbose addTmpTarball /tmp/npm-26-c30885fa/registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz not in flight; adding
+293 verbose addTmpTarball already have metadata; skipping unpack for isomorphic-fetch@2.2.1
+294 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+295 verbose addTmpTarball /tmp/npm-26-c30885fa/registry.npmjs.org/sync-request/-/sync-request-4.1.0.tgz not in flight; adding
+296 verbose addTmpTarball already have metadata; skipping unpack for sync-request@4.1.0
+297 verbose correctMkdir /node_modules correctMkdir already in flight; waiting
+298 error correctMkdir invalid dir /node_modules
+299 verbose addTmpTarball /tmp/npm-26-c30885fa/registry.npmjs.org/memory-cache/-/memory-cache-0.2.0.tgz not in flight; adding
+300 verbose addTmpTarball already have metadata; skipping unpack for memory-cache@0.2.0
+301 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+302 error correctMkdir invalid dir /node_modules
+303 http fetch 200 https://registry.npmjs.org/request/-/request-2.81.0.tgz
+304 silly fetchAndShaCheck shasum c6928946a0e06c5f8d6f8a9333469ffda46298a0
+305 verbose addTmpTarball /tmp/npm-26-c30885fa/registry.npmjs.org/request/-/request-2.81.0.tgz not in flight; adding
+306 verbose addTmpTarball already have metadata; skipping unpack for request@2.81.0
+307 verbose correctMkdir /node_modules correctMkdir not in flight; initializing
+308 error correctMkdir invalid dir /node_modules
+309 silly rollbackFailedOptional Starting
+310 silly rollbackFailedOptional Finishing
+311 silly runTopLevelLifecycles Finishing
+312 silly install printInstalled
+313 verbose stack Error: ENOTDIR: not a directory, mkdir '/node_modules/httpclient/0.1.0/package'
+313 verbose stack     at Error (native)
+314 verbose cwd /app/code
+315 error Linux 4.9.36-moby
+316 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "request" "isomorphic-fetch" "httpclient" "sync-request" "memory-cache"
+317 error node v6.11.2
+318 error npm  v3.10.10
+319 error path /node_modules/httpclient/0.1.0/package
+320 error code ENOTDIR
+321 error errno -20
+322 error syscall mkdir
+323 error ENOTDIR: not a directory, mkdir '/node_modules/httpclient/0.1.0/package'
+324 error If you need help, you may report this error at:
+324 error     <https://github.com/npm/npm/issues>
+325 verbose exit [ -20, true ]

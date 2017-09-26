@@ -20,6 +20,7 @@ class ProductCampaignListModel extends Model {
         var res_return = []
 
         this.product_campaign_ids().forEach(function(item) { 
+            console.log(item);
             res_return.push( new ProductCampaignModel(item) ) 
         } )
 
