@@ -6,8 +6,8 @@ services:
       - ../code/cms:/app/code
       - ../node_modules:/node_modules/
     ports:
-      - "4000:4000" 
-      - "8888:8888" 
+      - "4001:4000"
+      - "8111:80" 
     tty : true
     container_name:
       nodejs-cms

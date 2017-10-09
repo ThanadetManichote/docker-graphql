@@ -22,8 +22,8 @@ echo "    volumes:" >> ${COMPOSE_FILE}
 echo "      - ../code/${CHAPTER}:/app/code" >> ${COMPOSE_FILE}
 echo "      - ../node_modules:/node_modules/" >> ${COMPOSE_FILE}
 echo "    ports:" >> ${COMPOSE_FILE}
-echo '      - "4000:4000" ' >> ${COMPOSE_FILE}
-echo '      - "8888:8888" '  >> ${COMPOSE_FILE}
+echo '      - "4001:4000" ' >> ${COMPOSE_FILE}
+echo '      - "8111:80" '  >> ${COMPOSE_FILE}
 
 echo "    tty : true" >> ${COMPOSE_FILE}
 echo "    container_name:" >> ${COMPOSE_FILE}
