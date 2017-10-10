@@ -7,7 +7,7 @@ WORKDIR /app/code
 
 ENV NODE_PATH=/usr/local/lib/node_modules/
 ENV NODE_ENV=staging
-ENV NODE_PROJECT={'cms','trueyou'}
+ENV NODE_PROJECT=cms,fivestar_myanmar
 RUN npm config set cache /node_modules/ --global
 
 
