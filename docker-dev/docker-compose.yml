@@ -4,9 +4,9 @@ services:
     build: ./
     volumes:
       - ../code/cms:/app/code
-      - ../node_modules:/node_modules/
+      - ../node_modules/:/node_modules/
     ports:
-      - "4001:4000"
+      - "4001:4000" 
       - "8111:80" 
     tty : true
     container_name:
