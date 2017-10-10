@@ -1,7 +1,7 @@
 const RestHelper        = require('../helper/RestHelper');
-const CMSContentModel   = require('../model/CMS/Content');
-const CMSDataContentModel   = require('../model/CMS/DataContent');
-const CMSContentListModel   = require('../model/CMS/ContentList');
+const CMSContentModel   = require('../model/Cms/Content');
+const CMSDataContentModel   = require('../model/Cms/DataContent');
+const CMSContentListModel   = require('../model/Cms/ContentList');
 
 class Cms {
     constructor(){ 
