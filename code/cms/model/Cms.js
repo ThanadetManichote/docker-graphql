@@ -1,4 +1,3 @@
-const ContentModel      = require('./Cms/Content');
 const RestHelper        = require('../helper/RestHelper');
 const CMSContentModel   = require('../model/CMS/Content');
 const CMSDataContentModel   = require('../model/CMS/DataContent');
