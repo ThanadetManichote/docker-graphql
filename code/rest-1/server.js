@@ -12,7 +12,7 @@ const masterType    = new graphql.GraphQLObjectType(getMasterSchema())
 
 function getMasterSchema(){ 
   return {
-    name: 'Master',
+    name: 'Master', 
     fields: {
       master_id: { 
         type: graphql.GraphQLString ,
@@ -20,7 +20,7 @@ function getMasterSchema(){
       },
       privileges: { 
         type: new graphql.GraphQLList(privilegeType) ,
-        resolve (master) { return master.privilegelist.map(getPrivilege); }
+        resolve (master) { return master.privilegelist.map(getPrivilege); } 
       },
 
       privilege_list: { 
@@ -35,7 +35,7 @@ function getPrivilegeSchema(){
   return {
     name: 'Privilege',
     fields: {
-      privilege_id: { 
+      privilege_id: {  
         type: graphql.GraphQLString ,
         resolve (privilege) { return privilege.privilege_id }
       },
